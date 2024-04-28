@@ -13,10 +13,10 @@ namespace cs12
                 switch (task)
                 {
                     case 1:
-                        new Task1().DigitArray();
+                        DigitArray();
                         break;
                     case 2:
-                        new Task2().CityArray();
+                        CityArray();
                         break;
                     case 3:
                         var students = new List<Student>()
@@ -28,74 +28,32 @@ namespace cs12
                             new Student() { Name = "Boris", Surname = "Smith", Age = 22, NameOfInstitution = "Oxford" },
                         };
                         Console.WriteLine("List of all students:");
-                        foreach (var student in students)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(students);
 
                         Console.WriteLine("\n\nList of students with name 'Boris':");
                         var even1 = students.Where(n => n.Name == "Boris");
-                        foreach ( var student in even1)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even1);
 
                         Console.WriteLine("\n\nList of students with surname on 'Bro':");
                         var even2 = students.Where(n => n.Surname.StartsWith("Bro"));
-                        foreach (var student in even2)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even2);
 
                         Console.WriteLine("\n\nList of students that older than 19 years:");
                         var even3 = students.Where(n => n.Age > 19);
-                        foreach (var student in even3)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even3);
 
                         Console.WriteLine("\n\nList of students that older than 20 years:");
                         var even4 = students.Where(n => n.Age > 20 && n.Age < 23);
-                        foreach (var student in even4)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even4);
 
                         Console.WriteLine("\n\nList of students that studing in 'MIT':");
                         var even5 = students.Where(n => n.NameOfInstitution == "MIT");
-                        foreach (var student in even5)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even5);
 
                         Console.WriteLine("\n\nList of students that studing in 'Oxford':");
                         var even6 = students.Where(n => n.NameOfInstitution == "Oxford")
                                             .OrderByDescending(n => n.Age > 18);
-                        foreach (var student in even6)
-                        {
-                            Console.WriteLine($"Name:\t\t\t  {student.Name}");
-                            Console.WriteLine($"Surname:\t\t  {student.Surname}");
-                            Console.WriteLine($"Age:\t\t\t  {student.Age}");
-                            Console.WriteLine($"Educational institution:  {student.NameOfInstitution}");
-                        }
+                        ShowInfo(even6);
 
                         break;
                 }
@@ -158,6 +116,26 @@ namespace cs12
             //    Console.WriteLine(num);
             //}
 
+        }
+
+        private static void CityArray()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void DigitArray()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ShowInfo(IEnumerable<Student> even1)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ShowInfo(List<Student> students)
+        {
+            throw new NotImplementedException();
         }
     }
 }
